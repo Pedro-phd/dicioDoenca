@@ -7,10 +7,10 @@ module.exports = {
     },
 
     async create(req,res){
-        const {nome, historia,causas,sintomas,prevencao} = req.body
+        const {nome, definicao,causas,sintomas,prevencao} = req.body
         await connection('doencas').insert({
             nome,
-            historia,
+            definicao,
             causas,
             sintomas,
             prevencao
